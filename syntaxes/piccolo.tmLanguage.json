@@ -1,0 +1,79 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Piccolo",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.piccolo",
+					"match": "\\b(if|while|for|else)\\b"
+				},
+				{
+					"name": "keyword.operator.piccolo",
+					"match": "\\b(and|or|not)\\b"
+				},
+				{
+					"name": "keyword.other.piccolo",
+					"match": "\\b(var|fn|import|as)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.piccolo",
+					"match": "[0-9]+"	
+				},
+				{
+					"name": "constant.language.piccolo",
+					"match": "\\b(true|false)\\b"	
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.piccolo",
+					"match": "^#.*$"	
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.single.piccolo",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.piccolo",
+					"match": "\\\\."
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.other.piccolo",
+					"match": "(\\w+)\\s*\\="
+				}
+			]
+		}
+	},
+	"scopeName": "source.pic"
+}
