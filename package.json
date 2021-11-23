@@ -2,7 +2,7 @@
     "name": "piccolo",
     "displayName": "Piccolo",
     "description": "Piccolo language support for VSCode",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.62.0"
     },
@@ -10,16 +10,25 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "piccolo",
-            "aliases": ["Piccolo", "piccolo"],
-            "extensions": [".pic"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "piccolo",
-            "scopeName": "source.pic",
-            "path": "./syntaxes/piccolo.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "piccolo",
+                "aliases": [
+                    "Piccolo",
+                    "piccolo"
+                ],
+                "extensions": [
+                    ".pic"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "piccolo",
+                "scopeName": "source.pic",
+                "path": "./syntaxes/piccolo.tmLanguage.json"
+            }
+        ]
     }
 }
