@@ -13,9 +13,6 @@
 		},
 		{
 			"include": "#strings"
-		},
-		{
-			"include": "#variables"
 		}
 	],
 	"repository": {
@@ -31,7 +28,7 @@
 				},
 				{
 					"name": "keyword.other.piccolo",
-					"match": "\\b(var|fn|import|as)\\b"
+					"match": "\\b(var|fn|import|as|const)\\b"
 				}
 			]
 		},
@@ -63,14 +60,6 @@
 				{
 					"name": "constant.character.escape.piccolo",
 					"match": "\\\\."
-				}
-			]
-		},
-		"variables": {
-			"patterns": [
-				{
-					"name": "variable.other.piccolo",
-					"match": "(\\w+)\\s*\\="
 				}
 			]
 		}
